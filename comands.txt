@@ -1,0 +1,136 @@
+Options:
+  -o, --displayoptionchanges[=0 or 1]
+                        display changed options and actions  Default is '0'.
+                        Default argument is '1'.
+      --module=MODULE   switch to module MODULE. Valid strings are 'Capture',
+                        'Video', 'Multi Exposure', 'Multi Session' or an index
+                        in the range [0, 3]. Default is 'Capture'.
+      --verbose[=0 or 1]
+                        enable verbose mode.  Default is '0'. Default argument
+                        is '1'.
+      --kpi[=0 or 1]    enable kpi mode.  Default is '0'. Default argument is
+                        '1'.
+  -d, --device=INDEX    select camera device with INDEX. Valid values need to be
+                        in the range [0, 0]. Default is '0'.
+      --exposuretimerange=RANGE
+                        sets the exposure time range to RANGE, in nanoseconds.
+                        Valid values need to be in the range [7000,660000000,
+                        7000,660000000]. Default is '7000,660000000'.
+      --gainrange=RANGE sets the gain range to RANGE. Valid values need to be in
+                        the range [1,356.176, 1,356.176]. Default is
+                        '1,356.176'.
+      --sensormode=INDEX
+                        set sensor mode to INDEX. Valid strings are '0:
+                        4056x3040 @10bpp', '1: 3840x2160 @10bpp', '2: 1280x720
+                        @10bpp', '3: 1920x1080 @10bpp', '4: 4056x3040 @8bpp',
+                        '5: 3840x2160 @8bpp', '6: 1280x720 @8bpp', '7: 1920x1080
+                        @8bpp', '8: 4056x3040 @12bpp', '9: 3840x2160 @12bpp',
+                        '10: 1280x720 @12bpp' or an index in the range [0, 10].
+                        Default is '0: 4056x3040 @10bpp'.
+      --framerate=RATE  set the sensor frame rate to RATE. If RATE is 0 then VFR
+                        (variable frame rate) is enabled. Valid values need to
+                        be in the range [1.5, 60]. Default is '60'.
+      --focusposition=POSITION
+                        sets the focus position to POSITION, in focuser units.
+                        Valid values need to be in the range [0, 0]. Default is
+                        '0'.
+      --aperturemotorstep=STEP
+                        sets the aperture motor step to STEP, in step units.
+                        Valid values need to be in the range [0, 0]. Default is
+                        '0'.
+      --aperturemotorspeed=SPEED
+                        sets the aperture motor speed to SPEED, in steps/second
+                        units. Valid values need to be in the range [1, 1].
+                        Default is '1'.
+      --captureyuvformat=FORMAT
+                        YUV format for image capture. Valid strings are 'nv12',
+                        'p016' or an index in the range [0, 1]. Default is
+                        'nv12'.
+      --outputsize=WIDTHxHEIGHT
+                        set the still and video output size to WIDTHxHEIGHT
+                        (e.g. 1920x1080). If WIDTHxHEIGHT is '0x0' the output
+                        size is the sensor mode size.  Default is '0x0'.
+      --outputpath=PATH set the output file path. A file name, an incrementing
+                        index and the file extension will be appended. E.g.
+                        setting 'folder/' will result in 'folder/image0.jpg' or
+                        'folder/video0.mp4'. '/dev/null' can be used to discard
+                        output.  Default is '.'.
+      --denoise=MODE    set the denoising mode. Valid strings are 'off', 'fast',
+                        'highquality' or an index in the range [0, 2]. Default
+                        is 'fast'.
+      --denoisestrength=POSITION
+                        set the denoising strength. Valid values need to be in
+                        the range [-1, 1]. Default is '-1'.
+      --edgeenhance=MODE
+                        set the edge enhancement mode. Valid strings are 'off',
+                        'fast', 'highquality' or an index in the range [0, 2].
+                        Default is 'fast'.
+      --edgeenhancestrength=POSITION
+                        set the edge enhancement strength. Valid values need to
+                        be in the range [-1, 1]. Default is '-1'.
+      --aeantibanding=MODE
+                        set the auto exposure antibanding mode. Valid strings
+                        are 'off', 'auto', '50hz', '60hz' or an index in the
+                        range [0, 3]. Default is 'auto'.
+      --aelock=LOCK     set the auto exposure lock.  Default is '0'.
+      --awblock=LOCK    set the auto white balance lock.  Default is '0'.
+      --awb=MODE        set the auto white balance mode. Valid strings are
+                        'off', 'auto', 'incandescent', 'fluorescent',
+                        'warmfluorescent', 'daylight', 'cloudydaylight',
+                        'twilight', 'shade', 'manual' or an index in the range
+                        [0, 9]. Default is 'auto'.
+      --exposurecompensation=COMPENSATION
+                        set the exposure compensation to COMPENSATION. Valid
+                        values need to be in the range [-2, 2]. Default is '0'.
+      --ispdigitalgainrange=RANGE
+                        sets the ISP digital gain range. Valid values need to be
+                        in the range [1,256, 1,256]. Default is '1,256'.
+      --defog=ENABLE    set the DeFog enable flag to ENABLE.  Default is '0'.
+      --defogamount=AMOUNT
+                        sets the amount of fog to be removed to AMOUNT. Valid
+                        values need to be in the range [0, 1]. Default is '0.9'.
+      --defogquality=QUALITY
+                        sets the quality of the DeFog effect to QUALITY. Valid
+                        values need to be in the range [0, 1]. Default is
+                        '0.14285'.
+      --stillfiletype=FORMAT
+                        set image file type. Valid strings are 'jpg',
+                        'headerless' or an index in the range [0, 1]. Default is
+                        'jpg'.
+      --videobitrate=RATE
+                        set the video bit rate mode to RATE. If RATE is zero a
+                        reasonable default is selected. Valid values need to be
+                        in the range [0, 240000000]. Default is '0'.
+      --videoformat=FORMAT
+                        set the video format. Jetson-tx1 doesn't support vp9,
+                        use other available formats. Valid strings are 'h264',
+                        'h265', 'vp8', 'vp9' or an index in the range [0, 3].
+                        Default is 'h265'.
+      --videofiletype=TYPE
+                        set the video file type. For video format 'h265/vp9' set
+                        the file type as 'mkv' since 'h265 & vp9' are only
+                        supported by the 'mkv' container. Valid strings are
+                        'mp4', '3gp', 'avi', 'mkv', 'h265' or an index in the
+                        range [0, 4]. Default is 'mkv'.
+      --exposurerange=RANGE
+                        set the exposure range to RANGE. Valid values need to be
+                        in the range [-10,10, -10,10]. Default is '-2,2'.
+      --exposuresteps=COUNT
+                        sample the exposure range at COUNT steps. Valid values
+                        need to be in the range [2, 0]. Default is '3'.
+
+Actions:
+  -h, --help            display this help and exit
+  -x, --exit            exit from the program
+  -O, --displayoptionvalues
+                        display all options and values
+  -i, --info            print information on devices.
+      --loadconfig[=FILE]
+                        load configuration from XML FILE.  Default argument is
+                        'argusAppConfig.xml'.
+      --saveconfig[=FILE]
+                        save configuration to XML FILE.  Default argument is
+                        'argusAppConfig.xml'.
+  -s, --still[=COUNT]   do COUNT still captures and save as jpg files.  Default
+                        argument is '1'.
+  -v, --video=DURATION  record video for DURATION seconds and save to a file.
